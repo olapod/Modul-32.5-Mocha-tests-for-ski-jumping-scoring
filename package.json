@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:watch": "onchange \"./*.js\" -- npm test",
-    "test": "mocha calculateDistancePoints.test.js"
+    "test": "mocha *.test.js"
   },
   "author": "Ola Podsiadlik",
   "license": "ISC",

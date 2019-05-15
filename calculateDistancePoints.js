@@ -15,7 +15,7 @@ let basePoints, addOrSub;
         addOrSub = 1.2;
         break; 
   }
-  return basePoints + (distance - kPoint) * addOrSub 
+  return basePoints + ((distance - kPoint) * addOrSub)
 };
   
   module.exports = calculateDistancePoints;
