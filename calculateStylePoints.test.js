@@ -35,6 +35,14 @@ describe('calculateStylePoints', () => {
     
             assert.equal(actual, expected);
         });
+
+        it('Case 5: should return style points', () => {
+            const actual = calculateStylePoints ([18, 20, 0, 20, 21]); 
+    
+            const expected = NaN;  
+    
+            assert.equal(actual, expected);
+        });
     });
  });
 
