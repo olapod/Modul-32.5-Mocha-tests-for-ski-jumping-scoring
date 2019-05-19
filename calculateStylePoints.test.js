@@ -37,12 +37,57 @@ describe('calculateStylePoints', () => {
         });
 
         it('Case 5: should return style points', () => {
-            const actual = calculateStylePoints ([18, 20, 0, 20, 21]); 
+            const actual = calculateStylePoints ([18, 20, 0, 20, 'a']); 
     
-            const expected = NaN;  
+            const expected = false;  
+            
     
             assert.equal(actual, expected);
         });
+
+        it('Case 6: should return style points', () => {
+            const actual = calculateStylePoints ([18, 20, 0, 20, 22]); 
+    
+            const expected = false;  
+            
+    
+            assert.equal(actual, expected);
+        });
+
+        it('Case 7: should return style points', () => {
+            const actual = calculateStylePoints ([18, 20, 0, 20, null]); 
+    
+            const expected = false;  
+            
+    
+            assert.equal(actual, expected);
+        });
+
+        it('Case 8: should return style points', () => {
+            const actual = calculateStylePoints ([18, 20, 0, 20]); 
+    
+            const expected = false;  
+                
+            assert.equal(actual, expected);
+        });
+
+        it('Case 9: should return style points', () => {
+            const actual = calculateStylePoints ([18, 20, 0, 20, ' ']); 
+    
+            const expected = false;  
+                
+            assert.equal(actual, expected);
+        });
+
+        it('Case 10: should return style points', () => {
+            const actual = calculateStylePoints ([18, 20, 0, 20, undefined]); 
+    
+            const expected = false;  
+                
+            assert.equal(actual, expected);
+        });
+
+        
     });
  });
 

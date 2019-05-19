@@ -26,7 +26,39 @@ describe('calculateTotalPoints', () => {
             const expected = 60.8;
     
             assert.equal(actual, expected);
-        });        
+        });
+        
+        it('Test 4: should return total points for normal hill', () => {
+            const actual = calculateTotalPoints (80, 'normal', 98, [15, 15.5, 16, 15.5, 16], 'a', 0);
+    
+            const expected = false;
+    
+            assert.equal(actual, expected);
+        }); 
+
+        it('Test 5: should return total points for normal hill', () => {
+            const actual = calculateTotalPoints (80, 'normal', 98, [15, 15.5, 16, 15.5, 16], -2, null);
+    
+            const expected = false;
+    
+            assert.equal(actual, expected);
+        }); 
+
+        it('Test 6: should return total points for normal hill', () => {
+            const actual = calculateTotalPoints (80, 'normal', 98, [15, 15.5, 16, 15.5, 16], -2, undefined);
+    
+            const expected = false;
+    
+            assert.equal(actual, expected);
+        });
+
+        it('Test 7: should return total points for normal hill', () => {
+            const actual = calculateTotalPoints (80, 'normal', 98, [15, 15.5, 16, 15.5, 16], ' ', -5);
+    
+            const expected = false; 
+    
+            assert.equal(actual, expected);
+        });
     });
  });
  
